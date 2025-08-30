@@ -1,63 +1,65 @@
-# challenge-amigo-secreto
-ONE program - first challenge
+# 🎲 Challenge: Juego del Amigo Secreto
 
-# Amigo secreto
+![Logo Juego del Amigo Secreto](/assets/amigo-secreto.png)
 
-En este desafío, desarrollarás una aplicación que permita a los usuarios ingresar nombres de amigos en una lista para luego realizar un sorteo aleatorio y determinar quién es el "amigo secreto".
+## 📖 Descripción del Proyecto
 
-El usuario deberá agregar nombres mediante un campo de texto y un botón "Adicionar". Los nombres ingresados se mostrarán en una lista visible en la página, y al finalizar, un botón "Sortear Amigo" seleccionará uno de los nombres de forma aleatoria, mostrando el resultado en pantalla.
-Fucionalidades:
+<!-- Describe brevemente tu proyecto. ¿Qué problema resuelve? ¿Cuál es su propósito? -->
+Este proyecto es una aplicación web desarrollada como parte de un Challenge del programa ONE en Alura Latam. Permite a los usuarios crear una lista de participantes para un juego de "Amigo Secreto" y realizar un sorteo de forma aleatoria para determinar quién le regala a quién.
 
-* Agregar nombres: Los usuarios escribirán el nombre de un amigo en un campo de texto y lo agregarán a una lista visible al hacer clic en "Adicionar".
+El objetivo principal de este desafío es desarrollar habilidades en lógica de programación, por eso Alura ha proporcionado el HTML y CSS ya preparados. De esta manera, la idea fue enfocarse exclusivamente en construir la lógica del código JavaScript, aplicando conceptos clave como funciones, arrays, condicionales y variables. Esto permite centrarse en resolver el problema y mejorar el razonamiento lógico, sin preocuparse por la estructura visual del proyecto.
 
-* Validar entrada: Si el campo de texto está vacío, el programa mostrará una alerta pidiendo un nombre válido.
+---
 
-* Visualizar la lista: Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
+## ✨ Funcionalidades Principales
 
-* Sorteo aleatorio: Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
+El sistema permite realizar las siguientes acciones:
+*   **Agregar participantes:** Los usuarios pueden introducir nombres en un campo de texto y añadirlos a una lista.
+*   **Validación de entrada:** El sistema verifica que no se agreguen nombres duplicados o vacíos a la lista.
+*   **Realizar el sorteo:** Con al menos 3 participantes, se puede iniciar el sorteo aleatorio que asigna a cada persona un amigo secreto.
+*   **Visualización del resultado:** La aplicación muestra en pantalla el resultado del sorteo.
+*   **Reiniciar el juego:** Permite limpiar la lista de participantes para comenzar un nuevo sorteo.
 
-------
+---
 
-## Foco en la lógica
+## 🚀 Demo en Vivo
 
-El objetivo principal de este desafío es desarrollar habilidades en lógica de programación, por eso hemos proporcionado el HTML y CSS ya preparados. De esta manera, puedes enfocarte exclusivamente en construir la lógica del código JavaScript, aplicando conceptos clave como funciones, arrays, condicionales y variables. Esto te permitirá centrarte en resolver el problema y mejorar el razonamiento lógico, sin preocuparse por la estructura visual del proyecto.
+Puedes ver el proyecto en funcionamiento en el siguiente enlace: [Revisar Demo](https://sueopazo.github.io/challenge-amigo-secreto/)
 
-# PASOS
+### Vista Previa del Proyecto
+<!-- Aquí es un excelente lugar para poner capturas de pantalla o un GIF que muestre el flujo del usuario. -->
+![Vista previa del proyecto](/assets/preview-challenge.gif)
 
-## Crear un array para almacenar los nombres
+---
 
-Inicia declarando una variable de tipo array, que almacenará los nombres de los amigos ingresados.
+## 🛠️ Tecnologías Utilizadas
 
-## Implementa una función para agregar amigos
+Este proyecto fue construido utilizando las siguientes tecnologías:
 
-Desarrolla una función, que permita al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos creada anteriormente.
+*   **HTML5:** Para la estructura y el contenido de la aplicación web.
+*   **CSS3:** Para el diseño, los estilos visuales y la responsividad.
+*   **JavaScript:** Para toda la lógica interactiva, como agregar participantes, validar datos y ejecutar el sorteo.
 
-Tareas específicas:
-* Capturar el valor del campo de entrada: Utilizar document.getElementById o document.querySelector para obtener el texto ingresado por el usuario.
-* Validar la entrada: Implementar una validación para asegurarse de que el campo no esté vacío. Si está vacío, mostrar un alert con un mensaje de error: "Por favor, inserte un nombre."
-* Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombre de amigos usando el método.push().
-* Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
+---
 
-## Implementa una función para actualizar la lista de amigos
+## 🔧 Cómo Empezar (Instalación y Uso Local)
 
-Crea una función que recorra el array amigos y agregue cada nombre como un elemento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
+Si deseas ejecutar este proyecto en tu propia máquina, sigue estos pasos:
 
-Tareas específicas:
-* Obtener el elemento de la lista: Utilizar document.getElementById() o document.querySelector() para seleccionar la lista donde se mostrarán los amigos.
-* Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar.
-* Iterar sobre el arreglo: Usa un bucle for para recorrer el arreglo amigos y crear elementos de lista (<li>) para cada título.
-* Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista.
+### Pre-requisitos
+Ninguno. No necesitas ninguna herramienta especial más allá de tu navegador web (como Chrome, Firefox o Edge).
 
-## Implementa una función para sortear los amigos
+### Instalación
 
-Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. Usa Math.random() y Math.floor() para obtener un índice aleatorio.
+1.  **Clona el repositorio:**
+    ```
+    git clone https://github.com/sueopazo/challenge-amigo-secreto.git
+    ```
+2.  **Navega al directorio del proyecto:**
+    ```
+    cd challenge-amigo-secreto
+    ```
+3.  **Abre el proyecto:**
+    Simplemente abre el archivo `index.html` en tu navegador de preferencia.
 
-Tareas específicas:
-
-* Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
-
-* Generar un índice aleatorio: Usar Math.random() y Math.floor() para seleccionar un índice aleatorio del arreglo.
-
-* Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.
-
-* Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.
+¡Y listo! Ya puedes interactuar con la aplicación localmente.
