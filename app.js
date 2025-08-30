@@ -3,6 +3,7 @@
 
 const inputNombres = document.getElementById("amigo");
 const lista = document.getElementById("listaAmigos");
+const resultado = document.getElementById("resultado");
 let amigosIngresados = [];
 
 
@@ -36,5 +37,17 @@ function incluirEnLista() {
         let li = document.createElement("li");
         li.innerText = amigosIngresados[i];
         lista.appendChild(li)
+    }
+}
+
+// Implementa una función para sortear los amigos
+
+function sortearAmigo() {
+    if (amigosIngresados.length > 0) {
+        let indiceAleatorio = Math.floor(Math.random() * amigosIngresados.length);
+        let nombreSorteado = amigosIngresados[indiceAleatorio];
+        resultado.innerHTML = `<li>Tu amigo secreto es ${nombreSorteado}</li>`;
+    } else {
+        alert("Ingresa más nombres de amigos")
     }
 }
